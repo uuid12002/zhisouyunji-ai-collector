@@ -1,0 +1,130 @@
+{
+  "doubao": {
+    "thinking": {
+      "kind": "menu",
+      "control": "[data-testid=\"chat_input_action_model\"]",
+      "menu": "[role=\"menu\"]",
+      "on_values": ["深度思考", "思考"],
+      "off_values": ["快速"]
+    },
+    "url": "https://www.doubao.com/chat/",
+    "new_chat": "[data-testid=\"create_conversation_button\"]",
+    "input": "[data-testid=\"chat_input_input\"] [contenteditable=\"true\"]",
+    "send": "[data-testid=\"chat_input_send_button\"]",
+    "dismiss_promotion_texts": [
+      "下次提醒我"
+    ],
+    "promotion_dialogs": [
+      {"texts": ["每日签到", "豆包工作", "立即下载电脑版"]}
+    ],
+    "question": "[data-testid=\"message-list\"] [data-testid=\"send_message\"] [data-testid=\"message_text_content\"]",
+    "answer": "[data-testid=\"message-list\"] [data-testid=\"receive_message\"] [data-testid=\"message_text_content\"]",
+    "finished": "[data-testid=\"message-list\"] [data-testid=\"receive_message\"] [data-testid=\"message_action_regenerate\"]",
+    "busy": "[data-testid=\"chat_input_local_break_button\"]",
+    "verified": true,
+    "notes": "2026-10-29 短回答真实采集通过；等待动态发送按钮并处理已识别的下载推广提示。来源面板沿用 2026-10-23 验证，不代表本次重新验收。",
+    "share_button": "[data-testid=\"receive_message\"] [data-testid=\"message_action_share\"]",
+    "share_copy": "[data-testid=\"thread_share_copy_btn\"]",
+    "share_verified": true,
+    "share_hosts": [
+      "www.doubao.com",
+      "doubao.com"
+    ],
+    "share_target": "last",
+    "share_notes": "2026-11-11：使用已登录账号的已有会话，实测分享按钮→复制链接（DeepSeek 含创建步骤）；此记录只验收分享，不代表重新发送问答或所有页面变体。",
+    "input_method": "keyboard"
+  },
+  "deepseek": {
+    "thinking": {
+      "kind": "toggle",
+      "control": ".ds-toggle-button:has-text(\"深度思考\")",
+      "state_attribute": "aria-pressed",
+      "on_values": ["true"],
+      "off_values": ["false"]
+    },
+    "url": "https://chat.deepseek.com/",
+    "new_chat": "text=\"开启新对话\"",
+    "input": "textarea[placeholder=\"给 DeepSeek 发送消息 \"]",
+    "send": "._020ab5b [role=\"button\"].ds-button--primary",
+    "question": ".ds-message .ds-collapsible-text > div",
+    "answer": ".ds-message .ds-assistant-message-main-content",
+    "finished": "[data-virtual-list-item-key]:has(.ds-assistant-message-main-content) [aria-label=\"朗读\"]",
+    "busy": "",
+    "verified": true,
+    "search_toggle": ".ds-toggle-button:has-text(\"智能搜索\")",
+    "search_state_attribute": "aria-pressed",
+    "search_on_value": "true",
+    "search_off_value": "false",
+    "notes": "2026-10-29 短回答真实采集通过。智能搜索属性沿用 2026-10-23 验证，不代表本次重新验收。",
+    "share_button": "[role=\"button\"].ds-button--xs:has(path[d^=\"M7.95889 1.52285\"])",
+    "share_copy": "text=\"创建并复制\"",
+    "share_verified": true,
+    "share_hosts": [
+      "chat.deepseek.com"
+    ],
+    "share_create": "text=\"创建分享链接\"",
+    "share_target": "last",
+    "share_notes": "2026-11-11：使用已登录账号的已有会话，实测分享按钮→复制链接（DeepSeek 含创建步骤）；此记录只验收分享，不代表重新发送问答或所有页面变体。",
+    "input_method": "keyboard"
+  },
+  "yuanbao": {
+    "thinking": {
+      "kind": "menu",
+      "control": "button[data-thinking-mode-switcher-trigger=\"true\"]",
+      "menu": "[data-new-input-control=\"thinking-mode-switcher\"] [role=\"menu\"]",
+      "on_values": ["深度思考", "思考"],
+      "off_values": ["快速回答"]
+    },
+    "url": "https://yuanbao.tencent.com/",
+    "new_chat": "[role=\"button\"][aria-label=\"新建对话\"]",
+    "input": ".ql-editor[contenteditable=\"true\"]",
+    "send": "#yuanbao-send-btn[aria-label=\"发送\"]",
+    "question": ".agent-chat__list__item--human .hyc-content-text",
+    "answer": ".agent-chat__list__item--ai .hyc-common-markdown",
+    "finished": "#yuanbao-send-btn[aria-label=\"发送\"]",
+    "busy": "#yuanbao-send-btn[aria-label=\"停止回答\"]",
+    "login_required": ".agent-dialogue__tool__login, .hyc-login",
+    "verified": false,
+    "notes": "2026-11-11 公开页面和官方网页脚本检查：新对话、Quill 输入框、发送/停止状态已观察；登录后消息与引用区域待真实账号验收。",
+    "share_button": "[aria-label=\"分享\"][class*=\"Toolbar_shareIcon\"]:not([class*=\"webHumanToolbar\"])",
+    "share_copy": "[data-share-type=\"link\"][aria-label=\"复制链接\"]",
+    "share_verified": true,
+    "share_hosts": [
+      "yuanbao.tencent.com",
+      "yb.tencent.com"
+    ],
+    "share_target": "last",
+    "share_notes": "2026-11-11：使用已登录账号的已有会话，实测分享按钮→复制链接（DeepSeek 含创建步骤）；此记录只验收分享，不代表重新发送问答或所有页面变体。"
+  },
+  "qianwen": {
+    "thinking": {
+      "kind": "menu",
+      "control": "button[aria-haspopup=\"menu\"][aria-label=\"快速\"],button[aria-haspopup=\"menu\"][aria-label=\"思考\"],button[aria-haspopup=\"menu\"][aria-label=\"深度思考\"]",
+      "menu": "[role=\"menu\"]",
+      "on_values": ["深度思考", "思考"],
+      "off_values": ["快速"]
+    },
+    "url": "https://www.qianwen.com/",
+    "new_chat": "[data-session-switch-target=\"new-chat\"]",
+    "input": "[data-slate-editor=\"true\"][contenteditable=\"true\"]",
+    "send": "button[data-session-switch-target=\"send-query\"]",
+    "question": "[data-chat-question-wrap] .question-text-card",
+    "answer": "[data-chat-answers-wrap] .qk-markdown",
+    "finished": "[data-chat-answers-wrap] [data-answer-feedback-toolbar]",
+    "busy": "button[aria-label=\"停止生成\"], button[aria-label=\"停止回答\"]",
+    "login_required": "button:text-is(\"登录\")",
+    "verified": false,
+    "notes": "2026-11-11 公开页面和官方网页脚本检查：新对话、Slate 输入框、发送按钮与问答容器规则已观察；登录后完整问答和引用区域待真实账号验收。",
+    "share_button": "[data-answer-feedback-toolbar] div:has(> svg > path[d^=\"M512 119.168\"])",
+    "share_copy": "button:has-text(\"复制链接\")",
+    "share_verified": true,
+    "share_hosts": [
+      "www.qianwen.com",
+      "qianwen.com",
+      "tongyi.aliyun.com",
+      "qianwen.my.cn"
+    ],
+    "share_target": "last",
+    "share_notes": "2026-11-11：使用已登录账号的已有会话，实测分享按钮→复制链接（DeepSeek 含创建步骤）；此记录只验收分享，不代表重新发送问答或所有页面变体。"
+  }
+}

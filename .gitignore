@@ -1,0 +1,17 @@
+.venv*/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+data/
+build/
+releases/
+*.log
+.env
+.env.*
+*.key
+*.pem
+*.db
+*.sqlite*
+agent-connection.json
+client.json

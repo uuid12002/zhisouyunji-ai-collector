@@ -1,0 +1,10 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+include = ["collector/**/*.py", "test_architecture.py", "test_release.py", "test_batches.py", "test_sharing.py", "test_human_gate.py", "test_rpa.py", "test_browser_failures.py", "build_release.py", "test_agent.py", "agent_mcp.py", "test_workbench.py", "test_sessions.py", "test_promotions.py"]
+
+[tool.ruff.lint]
+select = ["E9", "F"]
+
+[tool.ruff.format]
+quote-style = "single"
